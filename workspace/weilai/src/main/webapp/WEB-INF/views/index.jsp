@@ -7,11 +7,11 @@
 <head>
 <meta charset="utf-8">
 
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+ <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
+ <link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
+ <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
  <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -139,8 +139,8 @@
 <form id="login" title="会员登录" >
 	<ol class="login_error"></ol>
 	<p>
-		<label for="user">帐号：</label>
-		<input type="text" name="login_user" class="text" id="login_user" />
+		<label for="login_email">E-MAIL：</label>
+		<input type="text" name="login_email" class="text" id="login_email" />
 		<span class="star">*</span>
 	</p>
 	<p>

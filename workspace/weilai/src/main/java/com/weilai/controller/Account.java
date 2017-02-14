@@ -6,6 +6,7 @@ import com.weilai.commons.log.dto.LogDto;
 import com.weilai.commons.secrtpass.SHAUtil;
 import com.weilai.commons.uuid.UUIDGenerator;
 import com.weilai.commons.dateTools.DateFormater;
+import com.weilai.form.LoginForm;
 import com.weilai.form.RegistForm;
 import com.weilai.pojo.User;
 import com.weilai.service.AccountService;
@@ -73,28 +74,27 @@ public class Account
   }
   
   @RequestMapping({"/loginUser"})
-  public void loginUser(RegistForm registForm, HttpServletResponse response) throws IOException
+  public void loginUser(LoginForm loginForm, HttpServletResponse response) throws IOException
   {
     LogDto ld = new LogDto();
     ld.setClassName(getClass().getName());
     ld.setMessageId("R000001");
-    ld.setMessageContext("Email:" + registForm.getEmail());
+    ld.setMessageContext("Email:" + loginForm.getLogin_email());
     ld.setLogInfo("[login]");
     this.logOutput.printLog(ld);
-    User user = this.accountService.getUserByEmailId(registForm.getEmail());
+    User user = this.accountService.getUserByEmailId(loginForm.getLogin_email());
    
     if(user !=null){
 	   try {	
-		   if(user.getsUserPassword().equals(SHAUtil.shaEncode(registForm.getPass()))){
+		   if(user.getsUserPassword().equals(SHAUtil.shaEncode(loginForm.getLogin_pass()))){
 			   response.getWriter().write("{\"result\":\""+ 1 +"\"}");
 		   }
 		
 	   } catch (Exception e) {	
 		e.printStackTrace();
 	   }
+    }else{
+        response.getWriter().write("{\"result\":\""+ 0 +"\"}");
     }
-    
-    response.getWriter().write("{\"result\":\""+ 0 +"\"}");
-    
   }
 }
