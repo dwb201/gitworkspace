@@ -1,0 +1,612 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.springsource.ide.eclipse.dashboard.ui;singlet
+ on:=true
+Archiver-Version: Plexus Archiver
+Built-By: bamboo
+Require-Bundle: org.eclipse.jface.text,org.eclipse.mylyn.commons.core;
+ bundle-version="[3.7.0,4.0.0)",org.eclipse.mylyn.commons.ui;bundle-ve
+ rsion="[3.7.0,4.0.0)",org.eclipse.mylyn.commons.net;bundle-version="[
+ 3.7.0,4.0.0)",org.eclipse.mylyn.commons.workbench;bundle-version="[3.
+ 7.0,4.0.0)",org.eclipse.mylyn.discovery.core;bundle-version="[3.7.0,4
+ .0.0)",org.eclipse.mylyn.discovery.ui;bundle-version="[3.7.0,4.0.0)",
+ org.eclipse.mylyn.tasks.core;bundle-version="[3.7.0,4.0.0)",org.eclip
+ se.mylyn.tasks.ui;bundle-version="[3.7.0,4.0.0)",org.eclipse.ui,org.e
+ clipse.ui.editors,org.eclipse.ui.forms,org.springsource.ide.eclipse.c
+ ommons.core,org.springsource.ide.eclipse.commons.ui,org.springsource.
+ ide.eclipse.commons.configurator,org.eclipse.core.expressions,org.ecl
+ ipse.ui.workbench.texteditor,com.sun.syndication,org.jdom,org.springs
+ ource.ide.eclipse.commons.frameworks.core
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: org.eclipse.core.runtime,org.eclipse.core.runtime.jobs
+ ,org.eclipse.osgi.service.datalocation,org.eclipse.osgi.service.resol
+ ver,org.eclipse.osgi.util,org.osgi.framework,org.springframework.util
+ ;version="[4.0.0,4.4.0)"
+Source-Control-Identifier: ac4f30a26ce72e99602509eed11d2a2fbba3dd80
+Export-Package: org.springsource.ide.eclipse.dashboard.internal.ui,org
+ .springsource.ide.eclipse.dashboard.internal.ui.discovery,org.springs
+ ource.ide.eclipse.dashboard.internal.ui.editors,org.springsource.ide.
+ eclipse.dashboard.internal.ui.feeds,org.springsource.ide.eclipse.dash
+ board.internal.ui.preferences,org.springsource.ide.eclipse.dashboard.
+ internal.ui.util,org.springsource.ide.eclipse.dashboard.ui,org.spring
+ source.ide.eclipse.dashboard.ui.actions
+Bundle-Name: %Bundle-Name
+Bundle-Version: 3.8.3.201612190658-RELEASE
+Bundle-Activator: org.springsource.ide.eclipse.dashboard.internal.ui.I
+ deUiPlugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_101
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$22.class
+SHA1-Digest: HfrQKraUcegUsy0d2H4KgNz36fA=
+
+Name: plugin.xml
+SHA1-Digest: hwuLo7GCgE57FZjCgc5pMQQwx7g=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ PartDescriptor.class
+SHA1-Digest: t8t+56w8pJ5VNVZ738oSTJizwII=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$4.class
+SHA1-Digest: S+eQLkc2TIkyI9M+fpf93svDiUI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor.class
+SHA1-Digest: w6gJjaKsKgIpap97g56niFgQe5w=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31$1.class
+SHA1-Digest: kFx7GfClitHLLbMbs6Lsey0uKaY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$2.class
+SHA1-Digest: e0SA1TrWkkvc46i6xPFi0/+3QpI=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowInstallExt
+ ensionAction.class
+SHA1-Digest: 7LUZDJFJH/o1/NWZw9/eHzvz3xk=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardA
+ ction.class
+SHA1-Digest: GlMjzbR8FGVwI4RBCA1lMOZrAUI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$32.class
+SHA1-Digest: 4/CTdqAJXFWyYUU3Yal33M5OvVQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$12.class
+SHA1-Digest: rSTAmt4+j/7i8nJI+3tDkoVtP9Q=
+
+Name: icons/view16/spring.png
+SHA1-Digest: MwmZn10gyEAgALCYBQECZdoBrDs=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractNewProjectActi
+ on.class
+SHA1-Digest: ALVLLJ3NaP1pa99xsn7gi1zGY2Q=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardP
+ ageAction$1.class
+SHA1-Digest: KeFX8k5mAtrV+UqhZm5Y1FG794E=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$1.class
+SHA1-Digest: +7AAJlCvOhMrLS6LZzn+eXWBCK0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skEditorActionContributor$GlobalAction.class
+SHA1-Digest: xSXXU1mdhtb3B7d5EktRQdo2/tY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$DashboardDiscoveryViewer.class
+SHA1-Digest: w44YwYXrhOy+jfLDnWORwF+gVoc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$4.class
+SHA1-Digest: s8hGdARTHeCA/sMKAigbQxnbylU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$18.class
+SHA1-Digest: MxDd0lmZWvzcavFMEv42p9d6bsM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ Reader.class
+SHA1-Digest: 0V/7OXKXg8RYYH/K2KPclhduUR8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$5.class
+SHA1-Digest: d9ScFzOq9euylU/3619kPh65Zew=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$4.class
+SHA1-Digest: sq0HlAKTqvPtIM4yQgXyMd7afLU=
+
+Name: rss/spring-research.xml
+SHA1-Digest: /cijKfyNVsMRTq0dl/H8KORrdpQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Cache
+ dFeedsManager.class
+SHA1-Digest: m6eyUG1GUJqQ+eWJUEJEFP/bE34=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Updat
+ eNotification$Artifact.class
+SHA1-Digest: +Lq9pGAzp7fhEm5MTUl4yd5nLqk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$5.class
+SHA1-Digest: MjI8SqFdvQFspgqhg1mcBfkFdPg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob.class
+SHA1-Digest: 5FyD5HZ/Q/EWxYpbQ3pl5adJTaU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$1.class
+SHA1-Digest: IEREMWpozWfMdt7SxqQ+8QxqS1A=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$ActionPart$1.class
+SHA1-Digest: Ngif60Wwj6lJ6WxS7knKNjqG6Bk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$7.class
+SHA1-Digest: YtaaLW7fERY96xUy+7YdUlV8T08=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$2.class
+SHA1-Digest: gFofemNgBl2lS2wd5ltxZrmg5io=
+
+Name: icons/prod/newsletter_subscription.gif
+SHA1-Digest: 9ILMcV+gu1WJzlc8LvlI0vo/uNY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage.class
+SHA1-Digest: FO3RSas6y3lyzBJWuZp0m6iawrE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$15.class
+SHA1-Digest: PhbCVuQVL+WKNpgTTRAHgZx2mIs=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPageFactory.class
+SHA1-Digest: GM+y1tXiabmLufGSCEgBVI0jhSg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$7.class
+SHA1-Digest: n8rnT9mPaHSpAfx4jaJoAspEcrY=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: RCj5qzA6QRy/fMEx/4xLjZvJ/6c=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/IEnabledDashboardPart.
+ class
+SHA1-Digest: Ity8WgfaDb7aIrge+1MdDv81tI4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$2.class
+SHA1-Digest: rjpNhyLp7gi8Ht0EHa9wniQ3VWM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin.c
+ lass
+SHA1-Digest: S+ye1/j8TFmPjJJCJa8O7XFMH2Q=
+
+Name: content/overviewExtensionContent.xml
+SHA1-Digest: b83mCj4jBq1siEn5sy718T7UJe0=
+
+Name: content/author-terms.html
+SHA1-Digest: gJkwAO0tCKAS+l2fUwyA0er2MPE=
+
+Name: rss/spring-news.xml
+SHA1-Digest: MC6BaCUCXtq7ACL0dEXZgqpfWIA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$17.class
+SHA1-Digest: Ra4pvOpbLA3pZPxHN+NeSDoRbmk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$AttributesPart.class
+SHA1-Digest: F97VnyX0D/Z989Zo4Jtcd7Lwqvo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$27.class
+SHA1-Digest: Ld8t2f7DsbhylsHSggYpKy9Sgvk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$4.class
+SHA1-Digest: dYCCJBIHKyvZR+L6uOpyNV4sDLU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls$1.class
+SHA1-Digest: RMo3owKz+X1+vRdsqSv6eyjlUdA=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPart.
+ class
+SHA1-Digest: Nk+zoqeStrF89OuYb/9ih8uVHU4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$4.class
+SHA1-Digest: t9rzZUw061Kn7xNDsJgOVg8UjG8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$26$1.class
+SHA1-Digest: ShQgAcmVMWiXFMrq3o7rCwrBdhA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$1.class
+SHA1-Digest: W5Kj27g0DHojI6gQ2tMgc4wZZUY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$6.class
+SHA1-Digest: HUYotnvIcaQrx8g0/kydFHGatXQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$6$1.class
+SHA1-Digest: DJ0Ju1+wkfBor0GNaE6x/kHuvaw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skEditorActionContributor.class
+SHA1-Digest: y9q9mS9g3N7ue73dsVS/wZ96lEk=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardP
+ ageAction.class
+SHA1-Digest: qpSjkAPGUvB+wHFbZpwMGjMKeQ0=
+
+Name: icons/prod/spring_logo_transparent.png
+SHA1-Digest: g7MO4419ZgN8VCHL0+JskcJc/T4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$3.class
+SHA1-Digest: M+UywsZFJJqIaFuDi4CQS7w/H8U=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin$1
+ .class
+SHA1-Digest: OVtGT3U5RUkcRiNibUnBoS5Q/Lc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$28.class
+SHA1-Digest: Hh1MIxdG2rUA+IwzXPvsYHIdOcY=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ ExtensionPartDescriptor.class
+SHA1-Digest: vQ+hiKqjmIURDgL3Jr92CHeSqYQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$1.class
+SHA1-Digest: 51oAdgjKRrnbFyyafUSN7HrCTFc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$21.class
+SHA1-Digest: GW385gdwT9SY5wDTktm+ZGJNYgg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/IFeedLi
+ stener.class
+SHA1-Digest: +lcMteT5pDqQTcFL8zHoE+LFm6s=
+
+Name: icons/prod/spring_32.png
+SHA1-Digest: qNVtx1VhuuFKog4LZSCj5ZdytRM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$5.class
+SHA1-Digest: G8KyFXGJfyDUhyY+ibiHza5Nlx4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit.class
+SHA1-Digest: s7DFFGIbNG6avshrTbs6Ew8s/60=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$16.class
+SHA1-Digest: GsPWuYq5MIJLoNAdjIj5F6tikjw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Abstr
+ actFormPage.class
+SHA1-Digest: InW/iNP8Q1yUlQbFIJnsgSnWT5A=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ 1.class
+SHA1-Digest: r0c5QnBuOqBHE3+vsJ8uH324YSA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/preferences/M
+ ainPreferencesPage$PropertyEditor.class
+SHA1-Digest: dgtI4VpGgG/2iNngO7mZajQ/tSg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$FeedType.class
+SHA1-Digest: nSya2TuLu6HzuqEQnkXX7rwtN8g=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$ExtensionPageDescriptor.class
+SHA1-Digest: 7Gc/COSLp8tJuvOgkr7agoIx4cc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$2.class
+SHA1-Digest: 2EmzbsdRTQzzMGRIEpQRh6xNKGA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$5.class
+SHA1-Digest: 9ygT609hozmIAgRAT78JvqMMNnk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls$1$1.class
+SHA1-Digest: WnwX+OuHNEs/FyMSX/Z5Kd4ynQE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob$1.class
+SHA1-Digest: a1pjWJUNX7rc2OI0bWj+/lryZ7k=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$10.class
+SHA1-Digest: VxyJrv6K5UIo2Zl0qtWdQsmwUr8=
+
+Name: content/overview.css
+SHA1-Digest: Oxtm9wr56vOmP4PTi4gltl4XsSQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$5.class
+SHA1-Digest: UzR2b2/jkYsv467JAuiHItXRZvs=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$19.class
+SHA1-Digest: RYnCAMjJmaFMocnb4nQo9EA4jpM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$6.class
+SHA1-Digest: 7Ia1y/3zkpANP5fyDrpX+RIZdPc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/preferences/M
+ ainPreferencesPage.class
+SHA1-Digest: fC8SRrZiDsCL715Bl80Nl2Ytwwo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardEditorInput.class
+SHA1-Digest: mFyR4avpaS0zX41RmkuluhDKGd8=
+
+Name: icons/rss/overlay-incoming.png
+SHA1-Digest: b6E9kaO99pcNIF+l4iTHdRvTBq4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardReopener$1.class
+SHA1-Digest: 0XZtKGJ7LuaGvRuTJLQnD1rR0U4=
+
+Name: rss/vmware-news.xml
+SHA1-Digest: cjAQnTsqIJIlAxfR/Nia8c1H7Ms=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$6.class
+SHA1-Digest: kEKbrVejs4bIb2EY8cvgvnDW7eE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StubS
+ yndEntryImpl.class
+SHA1-Digest: VB7pJCxQnHAVjocis4upO2iU5Ho=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IIdeUiConstan
+ ts.class
+SHA1-Digest: e8DwBCGMVR0yA9L2maVS2jto9Jo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$10$1.class
+SHA1-Digest: tPowcIRY7cyANUKdUt7NCx+wvk0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin$1
+ $1.class
+SHA1-Digest: BgaAScgayiEG+DrEooTzqxv/7a0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob$2.class
+SHA1-Digest: Ha6SLIztvyVu1qbld1HR1Q+kV7Q=
+
+Name: rss/spring-webinars.xml
+SHA1-Digest: 479FWcPN86XrSPr1dQXfB4m2MI4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$3.class
+SHA1-Digest: HF9e6xKPWjqo2VqsNhDiBtcBKRY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$9.class
+SHA1-Digest: JY/FdPMc6fJdZXZotXmiOK5/lyU=
+
+Name: rss/spring-events.xml
+SHA1-Digest: c7fbsuOX6rQO6TD2czeIoQqcBiQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$8.class
+SHA1-Digest: xne94aLjCabzQ0e/iJOeOW+HLG0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage.class
+SHA1-Digest: sxgXe2bkbVU0n2zD+Y64mmPTKDA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Updat
+ eNotification.class
+SHA1-Digest: u0su6HM/Is3OhMr0QIhxpO7pWkk=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/IDashboardWith
+ Pages.class
+SHA1-Digest: WgTnb5UEMu9+wvBCc5wGX2eaahc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$29.class
+SHA1-Digest: MJvj4gJPAdPWn40gTGIQ/y0soog=
+
+Name: content/manage-runtime.png
+SHA1-Digest: w7ta/qU6P68mpefgybmK3PyQcNc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$6.class
+SHA1-Digest: 5dcHLwbPk9TYYLspQfYNPGtx6UE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$1.class
+SHA1-Digest: Zxu3Y/ivMG5Fd0Y7X311nT0IcFo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/preferences/M
+ ainPreferencesPage$1.class
+SHA1-Digest: CASAaNw7prlE9G3isP1FBf1JDyU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$3.class
+SHA1-Digest: uiPuzkSIo4lO1zSGOBzEJ6xIa60=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31.class
+SHA1-Digest: PCUW2mV3STJCqXV3mNpMzgoVeDc=
+
+Name: rss/spring-downloads.xml
+SHA1-Digest: FZy2l6cfH0N5WOn8iPJcIlPCaPk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$3.class
+SHA1-Digest: eI+2CrKjFAK6ml66rppRTS8Y9aI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$23.class
+SHA1-Digest: TP6etcqLcc3wQ8T29ynXRKgCstQ=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardC
+ ommand.class
+SHA1-Digest: NoYmV2Lj64FzCtKYJJwbFNDGXU0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$11.class
+SHA1-Digest: ppAyDVaDe+pQUvAcuPbi5CBPtGw=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage.
+ class
+SHA1-Digest: hBuyn61dSmkDE/e0bd8F/VlrCgE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor.class
+SHA1-Digest: 78Tzx5/qexMP7XVaO1AZP3/YoEU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$26.class
+SHA1-Digest: y/Ur4F/QeByfuKe4WwIAMQ1Akko=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage.class
+SHA1-Digest: qlcsIF1sdngPTKVQDtP7KG0gkps=
+
+Name: content/sts48.png
+SHA1-Digest: PEBN6cRA6xGXamsHQpp3+eaXQxI=
+
+Name: icons/rss/blank.png
+SHA1-Digest: Zmp6KhRq0Q32e62E1R03kStnMAM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls.class
+SHA1-Digest: l7KQZjpqeOdw9cCzMrNlRfm/8t0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$20.class
+SHA1-Digest: gauCamykl3z9Nybae2xW3t5yjPw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ LabelProvider.class
+SHA1-Digest: 22jTvg4ECN1eaFF9I3gFS+EzwSY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Heade
+ rPart.class
+SHA1-Digest: JREhOCw4mUlDxB8haBOXKQv+j28=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$7.class
+SHA1-Digest: a20vjW/JGAAYcqZZL36zGFKH8z0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTe
+ xtViewerConfiguration.class
+SHA1-Digest: Q7VdTHqvBBu1blikmKcuZ8nOoyg=
+
+Name: icons/view16/welcome.png
+SHA1-Digest: p2x2EXq24Wqcuu8PRMGP4Y9pydk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ ContentProvider.class
+SHA1-Digest: LkzZo6AHEVqZrOjcl2xiGaBXcDk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardReopener.class
+SHA1-Digest: owgT7VfHFPEWBQ4fBKiS8aXl71M=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$3.class
+SHA1-Digest: WRjxGmxc9Ods0Vy88g6RzJMuxuI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$1.class
+SHA1-Digest: QGTbGPrDLpMwJvgNA+Wa0MpChFo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$14.class
+SHA1-Digest: o2YZM/FkMkG5vIpS+3ajX1EwzVg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$24.class
+SHA1-Digest: AL7Ch4rR54qkjFZXxTSVVSHSaoI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$4.class
+SHA1-Digest: yC/WRp4TOCN+L1s2rMO8T2NmqZI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$PageDescriptor.class
+SHA1-Digest: xeYBEnhCQ8k7BUmRW86brabdsOU=
+
+Name: about.html
+SHA1-Digest: fa2j3ypfGmOVKTeiyxpqKkv/zZI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$3.class
+SHA1-Digest: clEKzxdrQ6nzDTPw7OGGUxfy5Lc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$13.class
+SHA1-Digest: yPCtrhXH+3Nxh+JE7XpsHrPEn5w=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$6.class
+SHA1-Digest: 1vCTyhnavDolY7oxeivPoxTj8dM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$8.class
+SHA1-Digest: rPBu/WL7PEAvIJDQfLcxzsfGjSs=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ Reader$SyndEntryComparator.class
+SHA1-Digest: tbqJ/hmULUOpTKsm6ogPLlNcCYA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$25.class
+SHA1-Digest: Q3xdQK4WsXQwy9E9D8JH2URIykQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$30.class
+SHA1-Digest: BWpHyPWMXB2etwWqX9HTFUrLNrY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$ActionContributorProxy.class
+SHA1-Digest: Kbjp3yr2VscEL3bsypIg7yoWyHk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$2.class
+SHA1-Digest: 4u08W6x230AFchq2b3++OsVFK7U=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$ActionPart.class
+SHA1-Digest: OumUUO/5Vjgfftp6pEt/cWwZraU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31$1$1.class
+SHA1-Digest: yGnCC28jGWMDEhA7PWr3f9dXXPA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$2.class
+SHA1-Digest: rDbpyDUcWDBbvXWcqk1vvLW6MFk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardEditorInputFactory.class
+SHA1-Digest: IKJmXCu2mpuK6Q0mMy+rqCbrRBU=
+
