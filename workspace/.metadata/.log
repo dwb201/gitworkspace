@@ -8051,3 +8051,30 @@ Binding(ALT+COMMAND+C,
 
 !ENTRY org.eclipse.ui.navigator.resources 4 0 2017-02-14 20:11:33.212
 !MESSAGE Could not acquire INavigatorContentService: Project Explorer not found.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2017-02-14 21:03:44.714
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-02-14 21:08:45.875
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-02-14 21:08:45.875
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-02-14 21:09:13.495
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-02-14 21:09:13.495
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2017-02-14 21:10:16.249
+!MESSAGE Unable to retrieve a list of remote deployment scanners for server WildFly 10.x
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2017-02-14 21:10:16.303
+!MESSAGE Unable to retrieve a list of remote deployment scanners for server WildFly 10.x
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2017-02-14 21:13:02.652
+!MESSAGE Unable to retrieve a list of remote deployment scanners for server WildFly 10.x
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2017-02-14 21:13:02.735
+!MESSAGE Unable to retrieve a list of remote deployment scanners for server WildFly 10.x
