@@ -12,8 +12,15 @@ import javax.servlet.ServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.weilai.commons.constant.ConstantInfo;
+import com.weilai.commons.log.LogOutput;
+import com.weilai.commons.log.dto.LogDto;
+
 public class WeilaiFilter implements Filter{
     
+	@Autowired
+	LogOutput logOutput;
+
 	@Autowired
 	private AuditHandler auditHandler;
 	
@@ -23,6 +30,12 @@ public class WeilaiFilter implements Filter{
 
     public WeilaiFilter(AuditHandler auditHandler) {
         this.auditHandler = auditHandler;
+        LogDto logDto = new LogDto();
+        
+    	logDto.setClassName(appName);
+		logDto.setMessageId(ConstantInfo.I000001);
+		logDto.setLogInfo("[start log]");
+		logOutput.printLog(logDto);
     }
 
 

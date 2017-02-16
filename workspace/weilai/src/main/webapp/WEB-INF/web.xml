@@ -38,6 +38,15 @@
         <filter-name>auditFilter</filter-name>
         <url-pattern>/</url-pattern>
     </filter-mapping>
+    <filter>
+    <filter-name>WeilaiFilter</filter-name>
+    <filter-class>com.weilai.commons.filter.WeilaiFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>WeilaiFilter</filter-name>
+    <url-pattern>/*</url-pattern> <!-- リクエストパスが指定したパターンに一致するリクエストに対してのみFilterが適用されます。 -->
+    <!-- <servlet-name>app</servlet-name> --> <!-- 指定したサーブレットにマッピングされたリクエストに対してのみFilterが適用されます。 -->
+</filter-mapping>
   <!-- Spring监听器 -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

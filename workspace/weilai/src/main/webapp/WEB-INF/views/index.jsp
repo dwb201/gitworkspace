@@ -113,6 +113,11 @@
 		<span class="star">*</span>
 	</p>
 	<p>
+		<label for="confirmPass">パスワード確認：</label>
+		<input type="password" name="confirmPass" class="text" id="confirmPass" />
+		<span class="" id="confirm">*</span>
+	</p>
+	<p>
 		<label for="email">メール：</label>
 		<input type="text" name="email" class="text" id="email" />
 		<span class="star">*</span>
@@ -171,7 +176,17 @@
     <script src="assets/js/bootstrap.min.js"></script> 
 	<script src="assets/js/custom.js"></script>
     <script>
-    $(function(){	
+    $(function(){
+    	/* $('#confirmPass').focusout(function(e){
+    		if($('#pass').val() != $('#confirmPass').val()){
+    			$('#confirm').html("確認エラー");
+    			
+    		}else{
+    			$('#confirm').html("");
+    			
+    		}
+    	}); */
+    	
 			$('#login_a').click(function () {			
 				
 				$('#login').dialog('open');
@@ -206,7 +221,7 @@
 										//$.cookie('user', $('#user').val());
 										setTimeout(function () {
 											//$('#loading').dialog('close');
-											$('#reg').dialog('close');
+											$('#login').dialog('close');
 											$('#reg').resetForm();
 											//$('#reg span.star').html('*').removeClass('succ');
 											//$('#loading').css('background', 'url(img/loading.gif) no-repeat 20px center').html('数据交互中...');
@@ -274,7 +289,7 @@
 		autoOpen : false,
 		modal : true,
 		resizable : false,
-		width : 320,
+		width : 420,
 		height : 540,
 		buttons : {
 			'提交' : function () {
@@ -367,6 +382,11 @@
 				required : true,
 				minlength : 6
 			},
+			confirmPass : {
+				required : true,
+				minlength : 6,
+				equalTo : "#pass",
+			},
 			userName : {	
 				required : true,
 				//userName : true
@@ -375,6 +395,7 @@
 				date : true,
 			},
 		},
+		
 		messages : {
 			userName : {
 				required : '帐号不得为空！',
@@ -383,6 +404,11 @@
 			pass : {
 				required : '密码不得为空！',
 				minlength : $.validator.format('密码不得小于{0}位！'),
+			},
+			confirmPass : {
+				required : '确认密码不得为空！',
+				minlength : $.validator.format('确认密码不得小于{0}位！'),
+				equalTo : 'パスワードが一致してません',
 			},
 			email : {
 				required : '邮箱不得为空！',

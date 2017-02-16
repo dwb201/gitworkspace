@@ -13,7 +13,9 @@ import com.weilai.service.AccountService;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +30,7 @@ public class Account
   private AccountService accountService;
   
   @RequestMapping({"/registUser"})
-  public String registUser(RegistForm registForm) throws Exception
+  public String registUser(RegistForm registForm,HttpServletRequest request) throws Exception
   {
     LogDto ld = new LogDto();
     ld.setClassName(getClass().getName());
@@ -52,6 +54,9 @@ public class Account
  
     
     accountService.insertUser(user);
+    HttpSession session = request.getSession(true);
+    session.setAttribute("USER", user);
+    session.setAttribute("loginFlag", true);
     return "index";
   }
   
