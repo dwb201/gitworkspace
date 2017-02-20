@@ -9,7 +9,6 @@
 
 <context:component-scan base-package="com.weilai.commons"/>
 	
-
 <bean id="logOutput" class="com.weilai.commons.log.LogOutput"/>
 
 <bean id="property" class="com.weilai.commons.readproperties.PropertyPlaceholderConfigurer">

@@ -21,15 +21,16 @@ public class WeilaiFilter implements Filter{
 	@Autowired
 	LogOutput logOutput;
 
-	@Autowired
-	private AuditHandler auditHandler;
+	//@Autowired
+	private AuditHandler auditHandler = null;
 	
 	private String appName;
 
-    public WeilaiFilter() {}
+    //public WeilaiFilter() {}
 
-    public WeilaiFilter(AuditHandler auditHandler) {
-        this.auditHandler = auditHandler;
+    public WeilaiFilter() {
+       // this.auditHandler = auditHandler;
+    	auditHandler = new AuditHandler();
         LogDto logDto = new LogDto();
         
     	logDto.setClassName(appName);
@@ -46,7 +47,6 @@ public class WeilaiFilter implements Filter{
 			throws IOException, ServletException {
 		 auditHandler.auditRequest(appName,request);
 	        chain.doFilter(request, response);
-		
 	}
 
 	@Override

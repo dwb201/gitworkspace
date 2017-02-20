@@ -1,11 +1,11 @@
-#Thu Feb 16 19:38:15 JST 2017
+#Mon Feb 20 21:49:06 JST 2017
 vl=How many times the 'Finish' button pressed during the day
 l=Wizard class name
 ct=jbt
-d=1487241495752
+d=1487594946029
 c=0
 cmp=usage
 a=finishWizard
 cl=org.eclipse.egit.ui.internal.push.PushBranchWizard
 v=2.2.2
-s=0
+s=1

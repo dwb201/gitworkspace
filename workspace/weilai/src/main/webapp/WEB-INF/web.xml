@@ -7,6 +7,13 @@
  <welcome-file-list>
   <welcome-file>/index.html</welcome-file>
   </welcome-file-list> 
+     <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-weilai-commons.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <!-- 编码过滤器-->
   <filter>
     <filter-name>encodingFilter</filter-name>
@@ -48,9 +55,7 @@
     <!-- <servlet-name>app</servlet-name> --> <!-- 指定したサーブレットにマッピングされたリクエストに対してのみFilterが適用されます。 -->
 </filter-mapping>
   <!-- Spring监听器 -->
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+
   <!-- 防止Spring内存溢出监听器 -->
   <listener>
     <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
@@ -107,9 +112,6 @@
 <servlet-name>default</servlet-name>           
 <url-pattern>*.ico</url-pattern>
 </servlet-mapping>
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring-weilai-commons.xml</param-value>
-  </context-param>
+ 
  
 </web-app>
