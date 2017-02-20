@@ -25,6 +25,7 @@ public class WeilaiFilter implements Filter{
 	private AuditHandler auditHandler = null;
 	
 	private String appName;
+	
 
     //public WeilaiFilter() {}
 
