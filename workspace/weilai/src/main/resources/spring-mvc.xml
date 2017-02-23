@@ -14,8 +14,10 @@
 <property name="suffix" value=".jsp"></property> 
 </bean>
 
-<bean id="auditHandler" class="com.weilai.commons.filter.AuditHandler"/> 
+<!--  <bean id="auditHandler" class="com.weilai.commons.filter.AuditHandler"/> 
+<bean id="weilaiFilter" class="com.weilai.commons.filter.WeilaiFilter" /> -->
 
+<bean id="logOutput" class="com.weilai.commons.log.LogOutput"/> 
  
 <context:component-scan base-package="com.weilai.service.impl"/>
 </beans>

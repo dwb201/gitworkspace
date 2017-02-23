@@ -3,10 +3,11 @@
 import javax.servlet.ServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+//import org.springframework.security.
 import com.weilai.commons.log.LogOutput;
 import com.weilai.commons.log.dto.LogDto;
 import com.weilai.commons.constant.ConstantInfo;
+
 
 public class AuditHandler {
 	

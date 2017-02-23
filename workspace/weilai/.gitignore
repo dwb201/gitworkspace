@@ -1,2 +1,8 @@
 /bin/
 /build/
+*.jar
+bin/
+src/**/tests
+*.class
+eclipse/
+gradle-3.2.1/

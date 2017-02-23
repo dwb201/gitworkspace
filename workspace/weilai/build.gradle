@@ -45,6 +45,7 @@ dependencies {
  compile 'org.springframework:spring-jdbc:4.1.7.RELEASE'
  compile 'junit:junit:4.5'
  compile 'org.springframework:spring-test:4.0.5.RELEASE'
+ 
  //complie project(':weilai-commmons')
  
  compile fileTree(dir: '../libs', include: ['weilai-commons.jar']) 

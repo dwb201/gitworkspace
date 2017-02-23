@@ -186,7 +186,18 @@
     			
     		}
     	}); */
-    	
+    	 function getRootPath(){  
+    	        //获取当前网址，如： http://localhost:8099/UniqueduHome/view/error/notAuthorize.jsp  
+    	        var curWwwPath=window.document.location.href;  
+    	        //获取主机地址之后的目录，如： UniqueduHome/view/error/notAuthorize.jsp  
+    	        var pathName=window.document.location.pathname;  
+    	        var pos=curWwwPath.indexOf(pathName);  
+    	        //获取主机地址，如： http://localhost:8099  
+    	        var localhostPaht=curWwwPath.substring(0,pos);  
+    	        //获取带"/"的项目名，如：/UniqueduHome  
+    	        var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);  
+    	        return(localhostPaht+projectName);  
+    	    }  
 			$('#login_a').click(function () {			
 				
 				$('#login').dialog('open');
@@ -210,11 +221,13 @@
 						$(form).ajaxSubmit({
 							url : 'loginUser',
 							type : 'POST',
+							timeout: 10000,
 								beforeSubmit : function (formData, jqForm, options) {
 									//$('#reg').find('button').button('disable');
 									//$('#reg').close();
 								},
 								success : function (responseText, statusText) {
+									
 									if (responseText) {
 										//$('#reg').dialog('widget').find('button').eq(1).button('enable');
 										//$('#loading').css('background', 'url(img/success.gif) no-repeat 20px center').html('数据新增成功...');
@@ -231,6 +244,11 @@
 										}, 1000);
 									}
 								},
+								 error: function(data) {
+									 var url = getRootPath()+"/view/error/error.jsp";//获取工程路径  
+								        location.href = url;  
+							         },
+								
 						});
 					},
 					showErrors : function (errorMap, errorList) {

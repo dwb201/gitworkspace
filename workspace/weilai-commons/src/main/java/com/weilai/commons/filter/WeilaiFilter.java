@@ -16,13 +16,29 @@ import com.weilai.commons.constant.ConstantInfo;
 import com.weilai.commons.log.LogOutput;
 import com.weilai.commons.log.dto.LogDto;
 
+
 public class WeilaiFilter implements Filter{
     
-	@Autowired
+
+	@Autowired(required=true)
 	LogOutput logOutput;
 
-	//@Autowired
-	private AuditHandler auditHandler = null;
+	/**
+	 * @return the logOutput
+	 */
+	public LogOutput getLogOutput() {
+		return logOutput;
+	}
+
+	/**
+	 * @param logOutput the logOutput to set
+	 */
+	public void setLogOutput(LogOutput logOutput) {
+		this.logOutput = logOutput;
+	}
+
+	@Autowired
+	private AuditHandler auditHandler ;
 	
 	private String appName;
 	
@@ -30,14 +46,9 @@ public class WeilaiFilter implements Filter{
     //public WeilaiFilter() {}
 
     public WeilaiFilter() {
-       // this.auditHandler = auditHandler;
-    	auditHandler = new AuditHandler();
-        LogDto logDto = new LogDto();
-        
-    	logDto.setClassName(appName);
-		logDto.setMessageId(ConstantInfo.I000001);
-		logDto.setLogInfo("[start log]");
-		logOutput.printLog(logDto);
+       //this.auditHandler = AuditHandler;
+    	//auditHandler = new AuditHandler();
+       
     }
 
 
@@ -48,6 +59,12 @@ public class WeilaiFilter implements Filter{
 			throws IOException, ServletException {
 		 auditHandler.auditRequest(appName,request);
 	        chain.doFilter(request, response);
+	      //  LogDto logDto = new LogDto();
+	        
+//	    	logDto.setClassName(appName);
+//			logDto.setMessageId(ConstantInfo.I000001);
+//			logDto.setLogInfo("[start log]");
+//			logOutput.printLog(logDto);
 	}
 
 	@Override

@@ -7,4 +7,5 @@ org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferences.EXPORT_DE
 org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferences.JAR_REMAP_GRADLE_TO_GRADLE=false
 org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferences.JAR_REMAP_GRADLE_TO_MAVEN=true
 org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferences.JAR_REMAP_ON_OPEN_CLOSE=true
+org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferences.WTP_EXCLUDE=servlet-api-.*\\\\.jar\rjavax.servlet-api-.*\\\\.jar\rjsp-api-.*\\\\.jar\rjavax.servlet.*\\\\.jar;
 org.springsource.ide.eclipse.gradle.core.preferences.GradlePreferencesUSE_CUSTOM_TOOLING_MODEL=false

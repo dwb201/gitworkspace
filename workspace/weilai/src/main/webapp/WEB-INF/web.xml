@@ -7,18 +7,13 @@
  <welcome-file-list>
   <welcome-file>/index.html</welcome-file>
   </welcome-file-list> 
-     <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring-weilai-commons.xml</param-value>
-  </context-param>
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+ 
   <!-- 编码过滤器-->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
     <async-supported>true</async-supported>
+     
     <init-param>
       <param-name>encoding</param-name>
       <param-value>UTF-8</param-value>
@@ -29,31 +24,29 @@
     <url-pattern>/</url-pattern>
   </filter-mapping> 
   <filter>
-        <filter-name>auditFilter</filter-name>
+        <filter-name>DelegatingFilterProxy</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-        <init-param>
-        <!-- invoke lifecycle methods -->
-        <param-name>targetFilterLifecycle</param-name>
-        <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>appName</param-name>
-            <param-value>weilai</param-value>
+        <init-param>  
+          <param-name>targetFilterLifecycle</param-name>  
+          <param-value>true</param-value>  
+        </init-param>  
+        <init-param>  
+          <param-name>targetBeanName</param-name>  
+          <param-value>weilaiFilter</param-value>  
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>auditFilter</filter-name>
-        <url-pattern>/</url-pattern>
+        <filter-name>DelegatingFilterProxy</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <filter>
-    <filter-name>WeilaiFilter</filter-name>
-    <filter-class>com.weilai.commons.filter.WeilaiFilter</filter-class>
-</filter>
-<filter-mapping>
-    <filter-name>WeilaiFilter</filter-name>
-    <url-pattern>/*</url-pattern> <!-- リクエストパスが指定したパターンに一致するリクエストに対してのみFilterが適用されます。 -->
-    <!-- <servlet-name>app</servlet-name> --> <!-- 指定したサーブレットにマッピングされたリクエストに対してのみFilterが適用されます。 -->
-</filter-mapping>
+    <!-- <filter-class>com.weilai.commons.filter.WeilaiFilter</filter-class> -->
+ <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-weilai-commons.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <!-- Spring监听器 -->
 
   <!-- 防止Spring内存溢出监听器 -->

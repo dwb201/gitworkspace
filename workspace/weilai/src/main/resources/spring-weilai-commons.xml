@@ -9,8 +9,9 @@
 
 <context:component-scan base-package="com.weilai.commons"/>
 	
-<bean id="logOutput" class="com.weilai.commons.log.LogOutput"/>
-
+ <bean id="weilaiFilter" class="com.weilai.commons.filter.WeilaiFilter" />
+<bean id="logOutput" class="com.weilai.commons.log.LogOutput"/> 
+ <bean id="auditHandler" class="com.weilai.commons.filter.AuditHandler" />
 <bean id="property" class="com.weilai.commons.readproperties.PropertyPlaceholderConfigurer">
     <property name="locations">
         <list>
@@ -19,6 +20,7 @@
         </list>
     </property>
 </bean>
+
 
 <bean class="com.weilai.commons.readproperties.PropretiesTools"/>
 </beans>
