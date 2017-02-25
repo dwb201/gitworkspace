@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weilai.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.weilai.pojo.User">
+    <id column="S_ID" jdbcType="VARCHAR" property="sId" />
+    <result column="S_USER_NAME" jdbcType="VARCHAR" property="sUserName" />
+    <result column="S_USER_LEVEL" jdbcType="INTEGER" property="sUserLevel" />
+    <result column="S_USER_MAIL" jdbcType="VARCHAR" property="sUserMail" />
+    <result column="S_USER_PASSWORD" jdbcType="VARCHAR" property="sUserPassword" />
+    <result column="S_USER_WECHAT_ID" jdbcType="VARCHAR" property="sUserWechatId" />
+    <result column="S_USER_QQ_ID" jdbcType="VARCHAR" property="sUserQqId" />
+    <result column="S_USER_PHONENUMBER" jdbcType="VARCHAR" property="sUserPhonenumber" />
+    <result column="S_USER_JOIN_DATE" jdbcType="DATE" property="sUserJoinDate" />
+    <result column="S_USER_DIV" jdbcType="VARCHAR" property="sUserDiv" />
+    <result column="REGISTTIME" jdbcType="VARCHAR" property="registtime" />
+    <result column="UPDATETIME" jdbcType="VARCHAR" property="updatetime" />
+    <result column="REGISTER" jdbcType="VARCHAR" property="register" />
+    <result column="UPDATER" jdbcType="VARCHAR" property="updater" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    S_ID, S_USER_NAME, S_USER_LEVEL, S_USER_MAIL, S_USER_PASSWORD, S_USER_WECHAT_ID, 
+    S_USER_QQ_ID, S_USER_PHONENUMBER, S_USER_JOIN_DATE, S_USER_DIV, REGISTTIME, UPDATETIME, 
+    REGISTER, UPDATER
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from S_USER
+    where S_ID = #{sId,jdbcType=VARCHAR}
+  </select>
+   <select id="selectByEmailKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from S_USER
+    where S_USER_MAIL = #{sUserMail,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from S_USER
+    where S_ID = #{sId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.weilai.pojo.User">
+    insert into S_USER (S_ID, S_USER_NAME, S_USER_LEVEL, 
+      S_USER_MAIL, S_USER_PASSWORD, S_USER_WECHAT_ID, 
+      S_USER_QQ_ID, S_USER_PHONENUMBER, S_USER_JOIN_DATE, 
+      S_USER_DIV, REGISTTIME, UPDATETIME, 
+      REGISTER, UPDATER)
+    values (#{sId,jdbcType=VARCHAR}, #{sUserName,jdbcType=VARCHAR}, #{sUserLevel,jdbcType=INTEGER}, 
+      #{sUserMail,jdbcType=VARCHAR}, #{sUserPassword,jdbcType=VARCHAR}, #{sUserWechatId,jdbcType=VARCHAR}, 
+      #{sUserQqId,jdbcType=VARCHAR}, #{sUserPhonenumber,jdbcType=VARCHAR}, #{sUserJoinDate,jdbcType=DATE}, 
+      #{sUserDiv,jdbcType=VARCHAR}, #{registtime,jdbcType=VARCHAR}, #{updatetime,jdbcType=VARCHAR}, 
+      #{register,jdbcType=VARCHAR}, #{updater,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.weilai.pojo.User">
+    insert into S_USER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        S_ID,
+      </if>
+      <if test="sUserName != null">
+        S_USER_NAME,
+      </if>
+      <if test="sUserLevel != null">
+        S_USER_LEVEL,
+      </if>
+      <if test="sUserMail != null">
+        S_USER_MAIL,
+      </if>
+      <if test="sUserPassword != null">
+        S_USER_PASSWORD,
+      </if>
+      <if test="sUserWechatId != null">
+        S_USER_WECHAT_ID,
+      </if>
+      <if test="sUserQqId != null">
+        S_USER_QQ_ID,
+      </if>
+      <if test="sUserPhonenumber != null">
+        S_USER_PHONENUMBER,
+      </if>
+      <if test="sUserJoinDate != null">
+        S_USER_JOIN_DATE,
+      </if>
+      <if test="sUserDiv != null">
+        S_USER_DIV,
+      </if>
+      <if test="registtime != null">
+        REGISTTIME,
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME,
+      </if>
+      <if test="register != null">
+        REGISTER,
+      </if>
+      <if test="updater != null">
+        UPDATER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        #{sId,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserName != null">
+        #{sUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserLevel != null">
+        #{sUserLevel,jdbcType=INTEGER},
+      </if>
+      <if test="sUserMail != null">
+        #{sUserMail,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserPassword != null">
+        #{sUserPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserWechatId != null">
+        #{sUserWechatId,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserQqId != null">
+        #{sUserQqId,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserPhonenumber != null">
+        #{sUserPhonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserJoinDate != null">
+        #{sUserJoinDate,jdbcType=DATE},
+      </if>
+      <if test="sUserDiv != null">
+        #{sUserDiv,jdbcType=VARCHAR},
+      </if>
+      <if test="registtime != null">
+        #{registtime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="register != null">
+        #{register,jdbcType=VARCHAR},
+      </if>
+      <if test="updater != null">
+        #{updater,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.weilai.pojo.User">
+    update S_USER
+    <set>
+      <if test="sUserName != null">
+        S_USER_NAME = #{sUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserLevel != null">
+        S_USER_LEVEL = #{sUserLevel,jdbcType=INTEGER},
+      </if>
+      <if test="sUserMail != null">
+        S_USER_MAIL = #{sUserMail,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserPassword != null">
+        S_USER_PASSWORD = #{sUserPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserWechatId != null">
+        S_USER_WECHAT_ID = #{sUserWechatId,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserQqId != null">
+        S_USER_QQ_ID = #{sUserQqId,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserPhonenumber != null">
+        S_USER_PHONENUMBER = #{sUserPhonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sUserJoinDate != null">
+        S_USER_JOIN_DATE = #{sUserJoinDate,jdbcType=DATE},
+      </if>
+      <if test="sUserDiv != null">
+        S_USER_DIV = #{sUserDiv,jdbcType=VARCHAR},
+      </if>
+      <if test="registtime != null">
+        REGISTTIME = #{registtime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME = #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="register != null">
+        REGISTER = #{register,jdbcType=VARCHAR},
+      </if>
+      <if test="updater != null">
+        UPDATER = #{updater,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where S_ID = #{sId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.weilai.pojo.User">
+    update S_USER
+    set S_USER_NAME = #{sUserName,jdbcType=VARCHAR},
+      S_USER_LEVEL = #{sUserLevel,jdbcType=INTEGER},
+      S_USER_MAIL = #{sUserMail,jdbcType=VARCHAR},
+      S_USER_PASSWORD = #{sUserPassword,jdbcType=VARCHAR},
+      S_USER_WECHAT_ID = #{sUserWechatId,jdbcType=VARCHAR},
+      S_USER_QQ_ID = #{sUserQqId,jdbcType=VARCHAR},
+      S_USER_PHONENUMBER = #{sUserPhonenumber,jdbcType=VARCHAR},
+      S_USER_JOIN_DATE = #{sUserJoinDate,jdbcType=DATE},
+      S_USER_DIV = #{sUserDiv,jdbcType=VARCHAR},
+      REGISTTIME = #{registtime,jdbcType=VARCHAR},
+      UPDATETIME = #{updatetime,jdbcType=VARCHAR},
+      REGISTER = #{register,jdbcType=VARCHAR},
+      UPDATER = #{updater,jdbcType=VARCHAR}
+    where S_ID = #{sId,jdbcType=VARCHAR}
+  </update>
+</mapper>
