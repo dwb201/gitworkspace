@@ -1,5 +1,0 @@
-package com.weilai.commons.springsecurity;
-
-public class WebSecurityConfig {
-
-}
